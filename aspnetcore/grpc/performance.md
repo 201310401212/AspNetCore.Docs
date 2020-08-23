@@ -18,7 +18,7 @@ gRPC is designed for high-performance services. This document explains how to ge
 
 A gRPC channel should be reused when making gRPC calls. Reusing a channel allows calls to be multiplexed through an existing HTTP/2 connection.
 
-If a new channel is created for each gRPC call then the amount of time it takes to complete can increase significantly. Each call will require multiple network round-trips between the client and the server to create a HTTP/2 connection:
+If a new channel is created for each gRPC call then the amount of time it takes to complete can increase significantly. Each call will require multiple network round-trips between the client and the server to create an HTTP/2 connection:
 
 1. Opening a socket
 2. Establishing TCP connection
